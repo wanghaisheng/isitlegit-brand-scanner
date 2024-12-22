@@ -1,132 +1,4196 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><head><base href="https://isitlegit.shopconna.com">
+<title>Brand Legitimacy Analysis Framework</title>
+<style>
+:root {
+  --primary: #1F79D9;    /* Vibrant Blue */
+  --secondary: #4BB1FF;  /* Sky Blue */
+  --success: #4CAF50;    /* Lime Green */
+  --warning: #F9C741;    /* Muted Yellow */
+  --danger: #FF6F61;     /* Soft Coral */
+  --text: #333333;       /* Charcoal Gray */ 
+  --gray: #F4F4F4;       /* Light Silver */
+  --slate: #2C3E50;      /* Dark Slate */
+  --accent: #9B4DFF;     /* Electric Purple */
+  --bg: #FAFAFA;         /* Off-White */
+  --cloud: #E9ECEF;      /* Cloud White */
+}
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="keywords" content="mobile, simulator, mobile design, mobile app">
-  <meta name="author" content="Your Name or Company">
-  <meta http-equiv="Content-Language" content="en">
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.yourwebsite.com/pc-simulator" />
+.container {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="PC Simulator">
-  <meta property="og:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta property="og:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/pc-simulator">
-  <meta property="og:type" content="website">
+nav {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--slate);
+  border-radius: 8px;
+}
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PC Simulator">
-  <meta name="twitter:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
+nav a {
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
+nav a:hover {
+  background: var(--accent);
+}
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--cloud);
+  color: var(--text);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
 
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y) {
-      window.clarity=window.clarity||function(){(clarity.q=clarity.q||[]).push(arguments)};
-      clarity('set', 'anonymizeIP', true);
-      i=l.createElement('script');i.async=1;i.src=r;i.type='text/javascript';
-      t=l.getElementsByTagName('script')[0];t.parentNode.insertBefore(i,t);
-    })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
-  </script>
+.hero h1 {
+  color: var(--text);
+}
 
-  <title>PC Simulator</title>
+.hero-subtitle {
+  color: var(--gray);
+  font-size: 1.4rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+}
 
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-    .mobile-container {
-      width: 360px;
-      height: 640px;
-      border: 16px solid black;
-      border-radius: 16px;
-      background-color: #fff;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.feature-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid var(--gray);
+}
 
-    .content {
-      font-size: 1.2rem;
-      color: #333;
-    }
+.feature-card h3 {
+  color: var(--text);
+  margin-top: 0;
+}
 
-    /* Adjustments for PC */
-    @media (min-width: 768px) {
-      .mobile-container {
-        width: 600px;
-        height: 1000px;
-      }
+.cta-button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
 
-      .content {
-        font-size: 1.5rem;
-      }
-    }
+.cta-button:hover {
+  background: var(--secondary);
+}
 
-    @media (min-width: 1024px) {
-      .mobile-container {
-        width: 800px;
-        height: 1400px;
-      }
+.report-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  clear: right;
+}
 
-      .content {
-        font-size: 1.8rem;
-      }
-    }
+.report-section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
 
-    /* Additional responsiveness for larger screens */
-    @media (min-width: 1200px) {
-      body {
-        justify-content: flex-start;
-      }
+#glossary-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  clear: right;
+}
 
-      .mobile-container {
-        margin-top: 50px;
-      }
-    }
-  </style>
+#glossary-section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+#methodology {
+  clear: right;
+}
+
+#features {
+  clear: right;
+}
+
+#case-studies {
+  clear: right;
+}
+
+#testimonials {
+  clear: right;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.quick-nav {
+  position: sticky;
+  top: 1rem;
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  z-index: 100;
+  max-width: 250px;
+  float: right;
+  margin-left: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.quick-nav.collapsed {
+  transform: translateX(calc(100% - 30px));
+}
+
+.quick-nav-toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.quick-nav-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.quick-nav.collapsed .quick-nav-toggle svg {
+  transform: rotate(180deg);
+}
+
+.quick-nav h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.quick-nav a {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .quick-nav {
+    display: none;
+  }
+}
+
+.feature-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.benefit-list {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.benefit-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.case-studies {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--secondary);
+  border-radius: 8px;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.case-study-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.case-study-points {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.case-study-points li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.case-study-points li:before {
+  content: "✓";
+  position: absolute;
+  left: -1.2rem;
+  color: var(--primary);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.framework-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.report-header {
+  margin-bottom: 3rem;
+}
+
+.brand-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: var(--secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.summary-card.strength {
+  background: #e3f2fd;
+}
+
+.summary-card.warning {
+  background: #fff3e0;
+}
+
+.implementation-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-details {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.menu-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;  
+  z-index: 1000;
+  background: var(--primary);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+}
+
+.menu-button:hover {
+  background: #1a2f6d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--bg);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  padding: 3.5rem 1.5rem 1.5rem;
+  overflow-y: auto;
+}
+
+.side-nav.open {
+  transform: translateX(0);
+}
+
+.side-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+.side-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feature-deep-dive {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(42, 68, 148, 0.05);
+  border-radius: 8px;
+}
+
+.feature-deep-dive h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.checklist-item svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.checklist-content h4 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.checklist-content p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.data-visualization {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+  height: 300px;
+  margin: 1rem 0;
+}
+
+.success-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.metric-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.comparison-table th {
+  background: var(--primary);
+  color: var(--bg);
+}
+
+.comparison-table tr:nth-child(even) {
+  background: rgba(42, 68, 148, 0.05);
+}
+
+.testimonial-carousel {
+  position: relative;
+  padding: 2rem;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dot.active {
+  background: var(--primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.side-nav-links svg {
+  width: 16px;
+  height: 16px;
+}
+
+.side-nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.side-nav-section h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #666;
+  margin: 1rem 0 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(165deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 4rem 0;
+}
+
+.cta-section .section-heading h2 {
+  color: var(--bg);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cta-section .section-heading p {
+  color: var(--bg);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.scanner-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.cta-section .benefit-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-section .benefit-card h3 {
+  color: var(--bg);
+}
+
+.cta-section .benefit-card p {
+  color: var(--bg);
+  opacity: 0.9;
+}
+
+.cta-section .cta-button {
+  background: var(--bg);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.cta-section .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-section .cta-button {
+    margin: 0.5rem 0;
+  }
+}
+
+.hero-audiences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.audience-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.audience-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.audience-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.audience-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.audience-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.trust-indicators {
+  padding: 4rem 2rem;
+  background: var(--secondary);
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.indicator-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.indicator-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.common-concerns {
+  padding: 4rem 2rem;
+  background: var(--secondary);
+}
+
+.concerns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.concern-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.concern-details {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.concern-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.concern-details li:before {
+  content: "•";
+  position: absolute;
+  left: -1.2rem;
+  color: var(--primary);
+}
+
+.scanner-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.scanner-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.scanner-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.scanner-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.scanner-input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.scan-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.scan-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.scan-progress {
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.progress-container {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.scan-status {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.scan-results {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scan-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.trust-score-summary {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.score-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+}
+
+.score-chart {
+  transform: rotate(-90deg);
+}
+
+.score-circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 2.8;
+}
+
+.score-circle-fill {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s;
+}
+
+.score-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.dimension-scores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+.dimension-card {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.dimension-score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+.dimension-bar {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+
+.framework-intro-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.audience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.audience-card {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.audience-card h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.audience-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.audience-card li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.audience-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.feature-details {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tech-card {
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.methodology-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.step {
+  position: relative;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.pricing-card {
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  border: 2px solid var(--primary);
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 1.5rem 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.pricing-card li {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
+.framework-description {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.framework-description h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.framework-description p {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list li {
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trust-elements {
+  background: var(--bg); 
+  color: var(--text);
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+  border-radius: 8px;
+}
+
+.trust-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--cloud);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.trust-card h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.trust-card p {
+  color: var(--text);
+}
+
+.trust-elements .section-heading h2 {
+  color: var(--primary);
+}
+
+.trust-elements .section-heading p {
+  color: var(--text);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.step-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.factor-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.factor-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.factor-card li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.factor-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonial-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+.testimonial-card cite {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.demo-cta {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.verification-features {
+  padding: 4rem 2rem;
+  background: var(--bg);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.scan-demo {
+  padding: 4rem 2rem;
+  background: var(--cloud);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.step-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.trust-factors {
+  padding: 4rem 2rem;
+  background: var(--bg);
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.factor-card {
+  background: var(--cloud);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-testimonials {
+  padding: 4rem 2rem;
+  background: var(--cloud);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonial-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+.testimonial-card cite {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.demo-cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .verification-features,
+  .scan-demo,
+  .trust-factors,
+  .user-testimonials {
+    padding: 2rem 1rem;
+  }
+  
+  .features-grid,
+  .steps-grid,
+  .factors-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.verification-steps {
+  margin: 3rem 0;
+}
+
+.step-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  text-align: center;
+}
+
+.step-number {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.feature-card li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.story-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.story-card blockquote {
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+.story-card cite {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.feature-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(165deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--bg);
+  border-radius: 12px;
+  margin: 4rem 0;
+}
+
+.cta-section h2,
+.cta-section p {
+  color: var(--bg);
+}
+
+.cta-section .feature-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--bg);
+}
+
+.cta-section .cta-button {
+  background: var(--bg);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.cta-section .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .feature-highlights {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.certification-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.badge-card {
+  position: relative;
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid var(--cloud);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-card.featured {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.badge-label {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--bg);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-preview {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(165deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+}
+
+.badge-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.badge-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.badge-features li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.badge-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.badge-integration {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--cloud);
+  border-radius: 8px;
+}
+
+.integration-code {
+  display: block;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: var(--bg);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.badge-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 1.5rem 0;
+}
+
+.badge-price small {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.badge-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.badge-customization {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--cloud);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.badge-customization ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge-customization li {
+  background: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .badge-card.featured {
+    transform: none;
+  }
+  
+  .badge-customization ul {
+    flex-direction: column;
+  }
+}
+
+.service-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefit-highlight {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.benefit-highlight h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-highlight ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.benefit-highlight li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.benefit-highlight li:before {
+  content: "✓";
+  position: absolute;
+  left: -1.2rem;
+  color: var(--primary);
+}
+
+.trust-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.showcase-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.showcase-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+}
+
+.showcase-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.showcase-card ul {
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.showcase-card li {
+  margin-bottom: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .service-benefits,
+  .trust-showcase,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefit-highlight h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+}
+
+.trust-elements {
+  background: linear-gradient(165deg, rgba(31, 121, 217, 0.05) 0%, rgba(75, 177, 255, 0.05) 100%);
+  padding: 5rem 2rem;
+  margin: 3rem 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.benefit-highlight {
+  background: var(--bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.benefit-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+.benefit-highlight h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.benefit-highlight p {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.benefit-highlight ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-highlight li {
+  margin: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.benefit-highlight li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.trust-showcase {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.showcase-card {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.showcase-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+}
+
+.showcase-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.stats-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .trust-elements {
+    padding: 3rem 1.5rem;
+  }
+  
+  .service-benefits {
+    gap: 1.5rem;
+  }
+  
+  .benefit-highlight h3 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-value {
+    font-size: 2.2rem;
+  }
+}
+</style>
 </head>
-
 <body>
-  <div class="mobile-container">
-    <div class="content">
-      <p>Mobile Simulator Screen</p>
-      <p>PC Version: Adjusted for larger screens.</p>
+<div class="side-nav-overlay"></div>
+<button class="menu-button" onclick="toggleMenu()">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+  </svg>
+  Menu
+</button>
+
+<div class="side-nav">
+  <div class="side-nav-section">
+    <h3>Main Navigation</h3>
+    <div class="side-nav-links">
+      <a href="https://example.com/home" onclick="event.preventDefault(); showPage('home')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        Home
+      </a>
+      <a href="https://example.com/services" onclick="event.preventDefault(); showPage('services')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+        </svg>
+        For Brand Owners
+      </a>
+      <a href="https://example.com/consumer" onclick="event.preventDefault(); showPage('consumer')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+        </svg>
+        For Consumers
+      </a>
+      <a href="https://example.com/features" onclick="event.preventDefault(); showPage('features')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+        </svg>
+        Framework Features
+      </a>
+      <a href="https://example.com/report" onclick="event.preventDefault(); showPage('report')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM2 5v1h16v1H2z"/>
+        </svg>
+        Sample Report
+      </a>
+      <a href="https://example.com/generator" onclick="event.preventDefault(); showPage('generator')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+        </svg>
+        Brand Scanner
+      </a>
+      <a href="https://example.com/glossary" onclick="event.preventDefault(); showPage('glossary')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13 3H6v18h4v-6h3c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10h-3V7h3c2.21 0 4 1.79 4 4s-1.79 4-4 4z"/>
+        </svg>
+        Glossary
+      </a>
+      <a href="https://example.com/pricing" onclick="event.preventDefault(); showPage('pricing')">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8z"/>
+        </svg>
+        Pricing
+      </a>
     </div>
   </div>
-</body>
+  
+  <div class="side-nav-section">
+    <h3>Quick Links</h3>
+    <div class="side-nav-links">
+      <a href="#methodology">Methodology</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+  </div>
+</div>
 
-</html>
+<nav>
+  <a href="https://example.com/home" onclick="event.preventDefault(); showPage('home')">Home</a>
+  <a href="https://example.com/services" onclick="event.preventDefault(); showPage('services')">For Brand Owners</a>
+  <a href="https://example.com/consumer" onclick="event.preventDefault(); showPage('consumer')">For Consumers</a>
+  <a href="https://example.com/features" onclick="event.preventDefault(); showPage('features')">Framework Features</a>
+  <a href="https://example.com/report" onclick="event.preventDefault(); showPage('report')">Sample Report</a>
+  <a href="https://example.com/generator" onclick="event.preventDefault(); showPage('generator')">Brand Scanner</a>
+  <a href="https://example.com/glossary" onclick="event.preventDefault(); showPage('glossary')">Glossary</a>
+  <a href="https://example.com/pricing" onclick="event.preventDefault(); showPage('pricing')">Pricing</a>
+</nav>
+
+<div id="page-content">
+  <div class="hero">
+    <div class="framework-description">
+      <h1>Is That Brand Legit?</h1>
+      <p>Get instant verification of brand authenticity and trustworthiness with our AI-powered Brand Trust Scanner</p>
+      
+      <div class="hero-cta">
+        <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">Verify a Brand Now</a>
+        <a href="https://example.com/services" onclick="event.preventDefault(); showPage('services')" class="cta-button">For Brand Owners</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="verification-features">
+    <div class="section-heading">
+      <h2>Why Verify Brand Legitimacy?</h2>
+      <p>Make confident purchase decisions with comprehensive brand analysis</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Avoid Scams &amp; Fraud</h3>
+        <ul>
+          <li>Verify business registration</li>
+          <li>Check company history</li>
+          <li>Validate certifications</li>
+          <li>Review security measures</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <h3>Review Analysis</h3>
+        <ul>
+          <li>Aggregated customer feedback</li> 
+          <li>Sentiment analysis</li>
+          <li>Issue pattern detection</li>
+          <li>Industry comparison</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <h3>Quality Assurance</h3>
+        <ul>
+          <li>Product testing results</li>
+          <li>Quality certifications</li>
+          <li>Return policy analysis</li>
+          <li>Warranty verification</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="scan-demo">
+    <div class="section-heading">
+      <h2>How It Works</h2>
+      <p>Get instant brand verification in 3 simple steps</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Enter Brand Details</h3>
+        <p>Provide the brand name or website you want to verify</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>AI Analysis</h3>
+        <p>Our AI analyzes multiple trust factors and data points</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Get Results</h3>
+        <p>Receive a detailed trust report with actionable insights</p>
+      </div>
+    </div>
+
+    <div class="demo-cta">
+      <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">Try It Now</a>
+    </div>
+  </section>
+
+  <section class="trust-factors">
+    <div class="section-heading">
+      <h2>Our Verification Process</h2>
+      <p>We analyze brands across multiple dimensions to give you a complete trust assessment</p>
+    </div>
+
+    <div class="factors-grid">
+      <div class="factor-card">
+        <h3>Authentication</h3>
+        <ul>
+          <li>Business verification</li>
+          <li>Domain age check</li>
+          <li>SSL certification</li>
+          <li>Documentation review</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3>Customer Experience</h3>
+        <ul>
+          <li>Review analysis</li> 
+          <li>Support quality</li>
+          <li>Issue resolution</li>
+          <li>Satisfaction metrics</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3>Security &amp; Privacy</h3>
+        <ul>
+          <li>Payment security</li>
+          <li>Data protection</li>
+          <li>Privacy policies</li>
+          <li>Security practices</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3>Brand Reputation</h3>
+        <ul>
+          <li>Media coverage</li>
+          <li>Industry standing</li>
+          <li>Expert reviews</li>
+          <li>Market presence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="user-testimonials">
+    <div class="section-heading">
+      <h2>Success Stories</h2>
+      <p>See how our scanner helps users avoid scams and make confident decisions</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>&quot;The scanner helped me identify a fraudulent website before making a purchase. Saved me from losing money!&quot;</blockquote>
+        <cite>- Sarah M., Online Shopper</cite>
+      </div>
+
+      <div class="testimonial-card">
+        <blockquote>&quot;Finally, a tool that gives me peace of mind when shopping from new brands online.&quot;</blockquote>
+        <cite>- Michael R., Tech Enthusiast</cite>
+      </div>
+
+      <div class="testimonial-card">
+        <blockquote>&quot;The detailed analysis helped me choose between competing brands. Great for research!&quot;</blockquote>
+        <cite>- Emma T., Smart Consumer</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-heading">
+      <h2>Ready to Verify a Brand?</h2>
+      <p>Use our scanner to check brand legitimacy before making your next purchase</p>
+    </div>
+
+    <div class="scanner-benefits">
+      <div class="benefit-card">
+        <h3>Instant Analysis</h3>
+        <p>Get comprehensive analysis in minutes</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Data-Driven Insights</h3>
+        <p>Make informed decisions based on verified data</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Peace of Mind</h3>
+        <p>Avoid scams and fraudulent brands</p>
+      </div>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">
+        Verify a Brand Now
+      </a>
+      <a href="https://example.com/learn-more" onclick="event.preventDefault(); showPage('features')" class="cta-button">
+        See How It Works
+      </a>
+    </div>
+  </section>
+
+  <section class="trust-elements">
+    <div class="section-heading">
+      <h2>Why Build Trust?</h2>
+      <p>Trust is your most valuable business asset in today's digital landscape</p>
+    </div>
+    
+    <div class="service-benefits">
+      <div class="benefit-highlight">
+        <h3>74% of Consumers</h3>
+        <p>say brand trust is more important now than ever before in their purchase decisions</p>
+        <ul>
+          <li>Influences buying decisions</li>
+          <li>Drives customer loyalty</li>
+          <li>Increases brand value</li>
+        </ul>
+      </div>
+      <div class="benefit-highlight">
+        <h3>81% Conversion Boost</h3>
+        <p>average increase in conversion rates for brands displaying trust certification</p>
+        <ul>
+          <li>Higher conversion rates</li>
+          <li>Reduced cart abandonment</li>
+          <li>Increased average order value</li>
+        </ul>
+      </div>
+      <div class="benefit-highlight">
+        <h3>3.5x More Revenue</h3>
+        <p>trusted brands generate significantly more revenue from repeat customers</p>
+        <ul>
+          <li>Better customer retention</li>
+          <li>Higher lifetime value</li>
+          <li>Stronger brand advocacy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trust-showcase">
+      <div class="showcase-card">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z"/>
+          </svg>
+        </div>
+        <h3>Build Credibility</h3>
+        <p>Stand out from competitors with verified trust certification</p>
+        <ul>
+          <li>Third-party verification</li>
+          <li>Industry recognition</li>
+          <li>Trust badges display</li>
+        </ul>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Boost Confidence</h3>
+        <p>Give customers peace of mind with transparent trust metrics</p>
+        <ul>
+          <li>Transparency scoring</li>
+          <li>Security verification</li>
+          <li>Customer protection</li>
+        </ul>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+        </div>
+        <h3>Drive Growth</h3>
+        <p>Accelerate business growth through enhanced customer trust</p>
+        <ul>
+          <li>Higher conversions</li>
+          <li>Increased retention</li>
+          <li>Brand advocacy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">92%</div>
+        <div class="stat-label">of consumers read reviews before purchasing</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">88%</div>
+        <div class="stat-label">trust verified brand badges</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">67%</div>
+        <div class="stat-label">will pay more for trusted brands</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">3.2x</div>
+        <div class="stat-label">higher customer lifetime value</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="badges" class="certification-badges">
+    <div class="section-heading">
+      <h2>Trust Certification Badges</h2>
+      <p>Showcase your brand's commitment to transparency with our verified trust badges</p>
+    </div>
+    
+    <div class="badge-grid">
+      <div class="badge-card">
+        <div class="badge-preview">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z"/>
+          </svg>
+        </div>
+        <h3>Verified Trust Badge</h3>
+        <p>Our flagship verification badge for demonstrating brand legitimacy</p>
+        <ul class="badge-features">
+          <li>Real-time trust score display</li>
+          <li>Click-to-verify functionality</li>
+          <li>Third-party verification data</li>
+          <li>Mobile-responsive design</li>
+        </ul>
+        <div class="badge-integration">
+          <h4>Easy Integration</h4>
+          <code class="integration-code">
+            &lt;script src=&quot;https://trust.example.com/badge/v1&quot;&gt;&lt;/script&gt;
+          </code>
+        </div>
+        <div class="badge-price">Starting at &#x24;499<small>/year</small></div>
+        <a href="#pricing" class="cta-button">Get This Badge</a>
+      </div>
+      
+      <div class="badge-card featured">
+        <div class="badge-label">Most Popular</div>
+        <div class="badge-preview">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Security Excellence Badge</h3>
+        <p>Demonstrate your commitment to customer data protection</p>
+        <ul class="badge-features">
+          <li>SSL certification status</li>
+          <li>Security audit results</li>
+          <li>GDPR/CCPA compliance</li>
+          <li>Data protection measures</li>
+          <li>Real-time security monitoring</li>
+        </ul>
+        <div class="badge-integration">
+          <h4>Advanced Integration</h4>
+          <code class="integration-code">
+            &lt;script src=&quot;https://trust.example.com/secure/v1&quot;&gt;&lt;/script&gt;
+          </code>
+        </div>
+        <div class="badge-price">Starting at &#x24;999<small>/year</small></div>
+        <a href="#pricing" class="cta-button">Get This Badge</a>
+      </div>
+      
+      <div class="badge-card">
+        <div class="badge-preview">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+        </div>
+        <h3>Customer Excellence Badge</h3>
+        <p>Highlight your exceptional customer service standards</p>
+        <ul class="badge-features">
+          <li>Customer satisfaction score</li>
+          <li>Response time metrics</li>
+          <li>Review sentiment analysis</li>
+          <li>Service quality indicators</li>
+          <li>Support performance data</li>
+        </ul>
+        <div class="badge-integration">
+          <h4>Premium Integration</h4>
+          <code class="integration-code">
+            &lt;script src=&quot;https://trust.example.com/service/v1&quot;&gt;&lt;/script&gt;
+          </code>
+        </div>
+        <div class="badge-price">Starting at &#x24;799<small>/year</small></div>
+        <a href="#pricing" class="cta-button">Get This Badge</a>
+      </div>
+    </div>
+
+    <div class="badge-benefits">
+      <div class="benefit-card">
+        <h4>Increase Conversions</h4>
+        <p>Brands using our trust badges see an average 32% increase in conversion rates</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Build Customer Trust</h4>
+        <p>81% of customers are more likely to purchase from brands with verified trust badges</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Real-Time Updates</h4>
+        <p>Badges automatically update to reflect your latest trust metrics and achievements</p>
+      </div>
+    </div>
+
+    <div class="badge-customization">
+      <h3>Custom Badge Solutions</h3>
+      <p>Need a specialized trust badge for your brand? We offer custom solutions including:</p>
+      <ul>
+        <li>White-label options</li>
+        <li>Custom design and branding</li>
+        <li>Advanced API integration</li>
+        <li>Multi-domain support</li>
+      </ul>
+      <a href="https://example.com/contact" class="cta-button">Contact for Custom Solutions</a>
+    </div>
+  </section>
+
+  <section class="pricing-tiers">
+    <div class="section-heading">
+      <h2>Annual Trust Building Plans</h2>
+      <p>Choose the perfect plan to build and maintain trust with your customers</p>
+    </div>
+    
+    <div class="tier-grid">
+      <div class="pricing-tier">
+        <h3>Basic</h3>
+        <div class="tier-price">&#x24;499<small>/year</small></div>
+        <ul>
+          <li>Basic Trust Badge</li>
+          <li>Monthly Trust Reports</li>
+          <li>Basic Website Integration</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="https://example.com/signup" class="cta-button">Get Started</a>
+      </div>
+      
+      <div class="pricing-tier featured">
+        <h3>Professional</h3>
+        <div class="tier-price">&#x24;999<small>/year</small></div>
+        <ul>
+          <li>All Trust Badges</li>
+          <li>Weekly Trust Reports</li>
+          <li>Advanced Website Integration</li>
+          <li>Priority Support</li>
+          <li>Brand Monitoring</li>
+        </ul>
+        <a href="https://example.com/signup" class="cta-button">Get Started</a>
+      </div>
+      
+      <div class="pricing-tier">
+        <h3>Enterprise</h3>
+        <div class="tier-price">Custom</div>
+        <ul>
+          <li>Custom Badge Design</li>
+          <li>Real-time Trust Reports</li>
+          <li>Full API Access</li>
+          <li>Dedicated Support</li>
+          <li>White Label Option</li>
+        </ul>
+        <a href="https://example.com/contact" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="website-integration">
+    <h2>Easy Website Integration</h2>
+    <p>Add your trust badge to your website with a simple code snippet</p>
+    
+    <div class="integration-code">
+      <code>&lt;script src=&quot;https://trust-badge.example.com/v1/badge.js&quot;&gt;&lt;/script&gt;</code>
+    </div>
+    
+    <div class="integration-features">
+      <div class="feature">
+        <h3>Real-time Updates</h3>
+        <p>Badge automatically updates with your latest trust score and verification status</p>
+      </div>
+      <div class="feature">
+        <h3>Customizable Design</h3>
+        <p>Match the badge style to your website's look and feel</p>
+      </div>
+      <div class="feature">
+        <h3>Mobile Responsive</h3>
+        <p>Looks great on all devices and screen sizes</p>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+const pages = {
+  home: `
+    <div class="hero">
+      <div class="framework-description">
+        <h1>Is That Brand Legit?</h1>
+        <p>Get instant verification of brand authenticity and trustworthiness with our AI-powered Brand Trust Scanner</p>
+        
+        <div class="hero-cta">
+          <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">Verify a Brand Now</a>
+          <a href="https://example.com/services" onclick="event.preventDefault(); showPage('services')" class="cta-button">For Brand Owners</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="verification-features">
+      <div class="section-heading">
+        <h2>Why Verify Brand Legitimacy?</h2>
+        <p>Make confident purchase decisions with comprehensive brand analysis</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Avoid Scams & Fraud</h3>
+          <ul>
+            <li>Verify business registration</li>
+            <li>Check company history</li>
+            <li>Validate certifications</li>
+            <li>Review security measures</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Review Analysis</h3>
+          <ul>
+            <li>Aggregated customer feedback</li>
+            <li>Sentiment analysis</li>
+            <li>Issue pattern detection</li>
+            <li>Industry comparison</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Quality Assurance</h3>
+          <ul>
+            <li>Product testing results</li>
+            <li>Quality certifications</li>
+            <li>Return policy analysis</li>
+            <li>Warranty verification</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="scan-demo">
+      <div class="section-heading">
+        <h2>How It Works</h2>
+        <p>Get instant brand verification in 3 simple steps</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Enter Brand Details</h3>
+          <p>Provide the brand name or website you want to verify</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>AI Analysis</h3>
+          <p>Our AI analyzes multiple trust factors and data points</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Get Results</h3>
+          <p>Receive a detailed trust report with actionable insights</p>
+        </div>
+      </div>
+
+      <div class="demo-cta">
+        <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">Try It Now</a>
+      </div>
+    </section>
+
+    <section class="trust-factors">
+      <div class="section-heading">
+        <h2>Comprehensive Trust Analysis</h2>
+        <p>Our scanner evaluates brands across key trust dimensions</p>
+      </div>
+
+      <div class="factors-grid">
+        <div class="factor-card">
+          <h3>Authentication</h3>
+          <ul>
+            <li>Business verification</li>
+            <li>Domain age check</li>
+            <li>SSL certification</li>
+          </ul>
+        </div>
+
+        <div class="factor-card">
+          <h3>Customer Experience</h3>
+          <ul>
+            <li>Review analysis</li>
+            <li>Support quality</li>
+            <li>Issue resolution</li>
+          </ul>
+        </div>
+
+        <div class="factor-card">
+          <h3>Security & Privacy</h3>
+          <ul>
+            <li>Payment security</li>
+            <li>Data protection</li>
+            <li>Privacy policies</li>
+          </ul>
+        </div>
+
+        <div class="factor-card">
+          <h3>Brand Reputation</h3>
+          <ul>
+            <li>Media coverage</li>
+            <li>Industry standing</li>
+            <li>Expert reviews</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="user-testimonials">
+      <div class="section-heading">
+        <h2>User Success Stories</h2>
+        <p>See how our scanner helps users avoid scams and make confident decisions</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <blockquote>&quot;The scanner helped me identify a fraudulent website before making a purchase. Saved me from losing money!&quot;</blockquote>
+          <cite>- Sarah M., Online Shopper</cite>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>&quot;Finally, a tool that gives me peace of mind when shopping from new brands online.&quot;</blockquote>
+          <cite>- Michael R., Tech Enthusiast</cite>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>&quot;The detailed analysis helped me choose between competing brands. Great for research!&quot;</blockquote>
+          <cite>- Emma T., Smart Consumer</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="section-heading">
+        <h2>Ready to Verify a Brand?</h2>
+        <p>Use our scanner to check brand legitimacy before making your next purchase</p>
+      </div>
+
+      <div class="scanner-benefits">
+        <div class="benefit-card">
+          <h3>Instant Analysis</h3>
+          <p>Get comprehensive analysis in minutes</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Data-Driven</h3>
+          <p>Make decisions based on verified data</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Peace of Mind</h3>
+          <p>Avoid scams and fraudulent brands</p>
+        </div>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://example.com/scanner" class="cta-button">Verify a Brand Now</a>
+        <a href="https://example.com/learn-more" class="cta-button">See How It Works</a>
+      </div>
+    </section>
+  `,
+  services: `
+    <div class="hero">
+      <div class="framework-description">
+        <h1>Build Trust with Your Customers</h1>
+        <p>Showcase your brand's commitment to transparency and authenticity with our trust certification system</p>
+        
+        <div class="hero-cta">
+          <a href="#pricing" class="cta-button">View Pricing Plans</a>
+          <a href="#badges" class="cta-button">Explore Trust Badges</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="trust-elements">
+      <div class="section-heading">
+        <h2>Why Build Trust?</h2>
+        <p>In today's digital landscape, trust is the foundation of successful business relationships</p>
+      </div>
+      
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>74%</h3>
+          <p>of consumers say brand trust is more important now than ever before</p>
+        </div>
+        <div class="trust-card">
+          <h3>81%</h3>
+          <p>of customers need to trust a brand before making a purchase</p>
+        </div>
+        <div class="trust-card">
+          <h3>32%</h3>
+          <p>increase in conversion rates for brands with trust certification</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="key-benefits">
+      <div class="section-heading">
+        <h2>Benefits for Your Brand</h2>
+        <p>Enhance your brand's credibility and boost customer confidence</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Higher Conversions</h3>
+          <ul>
+            <li>Increased customer trust</li>
+            <li>Better purchase confidence</li>
+            <li>Reduced cart abandonment</li>
+            <li>Improved sales metrics</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h3>Brand Protection</h3>
+          <ul>
+            <li>Real-time monitoring</li>
+            <li>Fraud prevention</li>
+            <li>Reputation management</li>
+            <li>Crisis alerts</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h3>Customer Loyalty</h3>
+          <ul>
+            <li>Enhanced retention</li>
+            <li>Positive word-of-mouth</li>
+            <li>Repeat purchases</li>
+            <li>Brand advocacy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="badges" class="badge-examples">
+      <div class="section-heading">
+        <h2>Trust Certification Badges</h2>
+        <p>Display your commitment to transparency with our verified trust badges</p>
+      </div>
+      
+      <div class="badge-grid">
+        <div class="badge-card">
+          <div class="badge-preview">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z"/>
+            </svg>
+          </div>
+          <h3>Basic Trust Badge</h3>
+          <p>Showcase your verified status and trust score</p>
+          <div class="badge-price">$499<small>/year</small></div>
+          <ul>
+            <li>Basic trust verification</li>
+            <li>Monthly trust score updates</li>
+            <li>Simple badge integration</li>
+            <li>Email support</li>
+          </ul>
+        </div>
+        
+        <div class="badge-card">
+          <div class="badge-preview">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Professional Badge</h3>
+          <p>Enhanced trust certification with detailed analytics</p>
+          <div class="badge-price">$999<small>/year</small></div>
+          <ul>
+            <li>Advanced trust verification</li>
+            <li>Weekly trust score updates</li>
+            <li>Customizable badge design</li>
+            <li>Detailed analytics dashboard</li>
+            <li>Priority support</li>
+          </ul>
+        </div>
+        
+        <div class="badge-card">
+          <div class="badge-preview">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+          </div>
+          <h3>Enterprise Badge</h3>
+          <p>Custom solutions for large businesses</p>
+          <div class="badge-price">Custom</div>
+          <ul>
+            <li>Custom verification criteria</li>
+            <li>Real-time trust monitoring</li>
+            <li>White-label options</li>
+            <li>API access</li>
+            <li>Dedicated support</li>
+            <li>Custom reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-reports">
+      <div class="section-heading">
+        <h2>Comprehensive Trust Reports</h2>
+        <p>Monitor your brand's trust metrics and reputation with detailed analytics</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Trust Score Analysis</h3>
+          <ul>
+            <li>Overall trust rating</li>
+            <li>Dimension scores</li>
+            <li>Industry comparison</li>
+            <li>Trend analysis</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Customer Sentiment</h3>
+          <ul>
+            <li>Review analysis</li>
+            <li>Sentiment trends</li>
+            <li>Feedback monitoring</li>
+            <li>Improvement suggestions</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Security Assessment</h3>
+          <ul>
+            <li>Website security check</li>
+            <li>Data protection review</li>
+            <li>Privacy policy analysis</li>
+            <li>Security recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="integration-features">
+      <div class="section-heading">
+        <h2>Easy Integration Options</h2>
+        <p>Seamlessly integrate trust badges into your digital presence</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Website Integration</h3>
+          <ul>
+            <li>Simple code snippet</li>
+            <li>WordPress plugin</li>
+            <li>Shopify app</li>
+            <li>Custom API access</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Email Integration</h3>
+          <ul>
+            <li>Email signature badges</li>
+            <li>Newsletter integration</li>
+            <li>Campaign templates</li>
+            <li>Automated updates</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Marketing Tools</h3>
+          <ul>
+            <li>Social media badges</li>
+            <li>Marketing materials</li>
+            <li>Press kit assets</li>
+            <li>Brand guidelines</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="real-time-monitoring">
+      <div class="section-heading">
+        <h2>Real-Time Trust Monitoring</h2>
+        <p>Stay informed about your brand's trust metrics and reputation</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Instant Alerts</h3>
+          <ul>
+            <li>Review notifications</li>
+            <li>Sentiment changes</li>
+            <li>Security alerts</li>
+            <li>Compliance updates</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Performance Tracking</h3>
+          <ul>
+            <li>Trust score trends</li>
+            <li>Competitor analysis</li>
+            <li>Industry benchmarks</li>
+            <li>Custom KPIs</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Action Items</h3>
+          <ul>
+            <li>Improvement suggestions</li>
+            <li>Priority tasks</li>
+            <li>Best practices</li>
+            <li>Success metrics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-stories">
+      <div class="section-heading">
+        <h2>Client Success Stories</h2>
+        <p>See how other brands have benefited from our trust certification</p>
+      </div>
+
+      <div class="stories-grid">
+        <div class="story-card">
+          <blockquote>"Our conversion rate increased by 45% after implementing the trust badge."</blockquote>
+          <cite>- Sarah Johnson, E-commerce Director</cite>
+        </div>
+
+        <div class="story-card">
+          <blockquote>"Customer trust scores improved significantly within just 3 months."</blockquote>
+          <cite>- Michael Chen, Marketing Manager</cite>
+        </div>
+
+        <div class="story-card">
+          <blockquote>"The real-time monitoring helped us address issues before they became problems."</blockquote>
+          <cite>- Emma Williams, Brand Manager</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-resources">
+      <div class="section-heading">
+        <h2>Dedicated Support & Resources</h2>
+        <p>We're here to help you succeed with your trust certification</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Technical Support</h3>
+          <ul>
+            <li>24/7 support team</li>
+            <li>Integration assistance</li>
+            <li>Troubleshooting help</li>
+            <li>Custom solutions</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Training Resources</h3>
+          <ul>
+            <li>Video tutorials</li>
+            <li>Documentation</li>
+            <li>Best practices</li>
+            <li>Case studies</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Success Team</h3>
+          <ul>
+            <li>Dedicated manager</li>
+            <li>Strategy sessions</li>
+            <li>Performance reviews</li>
+            <li>Growth planning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="section-heading">
+        <h2>Ready to Build Trust?</h2>
+        <p>Start showcasing your brand's commitment to transparency today</p>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="#pricing" class="cta-button">View Pricing Plans</a>
+        <a href="https://example.com/demo" class="cta-button">Request Demo</a>
+      </div>
+    </section>
+  `,
+  consumer: `
+    <div class="hero" style="background: var(--bg);">
+      <div class="framework-description">
+        <h1>Is That Brand Legit?</h1>
+        <p>Verify any brand's authenticity before making your purchase decision. Our AI-powered scanner helps you shop with confidence.</p>
+        
+        <div class="verification-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0;">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Enter Brand Details</h3>
+            <p>Simply enter the brand name or website you want to verify</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Get Instant Analysis</h3> 
+            <p>Our AI analyzes multiple trust factors and data points</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Make Informed Decisions</h3>
+            <p>Review the detailed trust report with actionable insights</p>
+          </div>
+        </div>
+
+        <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">
+          Verify a Brand Now
+        </a>
+      </div>
+    </div>
+
+    <section class="verification-features">
+      <div class="section-heading">
+        <h2>What We Check</h2>
+        <p>Our comprehensive analysis covers key trust factors</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Authentication</h3>
+          <ul>
+            <li>Business Registration</li>
+            <li>Domain Age & History</li>
+            <li>SSL Certification</li>
+            <li>Official Documentation</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Customer Experience</h3>
+          <ul>
+            <li>Review Analysis</li> 
+            <li>Customer Service Quality</li>
+            <li>Issue Resolution</li>
+            <li>Satisfaction Rates</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Security & Privacy</h3>
+          <ul>
+            <li>Payment Security</li>
+            <li>Data Protection</li>
+            <li>Privacy Policies</li>
+            <li>Security Measures</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <h3>Brand Reputation</h3>
+          <ul>
+            <li>Media Coverage</li>
+            <li>Industry Standing</li>
+            <li>Expert Reviews</li>
+            <li>Market Presence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="common-concerns">
+      <div class="section-heading">
+        <h2>Protect Yourself Online</h2>
+        <p>We help you address common concerns before making a purchase</p>
+      </div>
+
+      <div class="concerns-grid">
+        <div class="concern-card">
+          <h3>Avoid Financial Loss</h3>
+          <ul class="concern-details">
+            <li>Verify payment security measures</li>
+            <li>Check refund policies</li>
+            <li>Review customer experiences</li>
+            <li>Validate business legitimacy</li>
+          </ul>
+        </div>
+
+        <div class="concern-card">
+          <h3>Quality Assurance</h3>
+          <ul class="concern-details">
+            <li>Product authenticity verification</li>
+            <li>Quality certifications check</li>
+            <li>Customer satisfaction analysis</li>
+            <li>Performance benchmarking</li>
+          </ul>
+        </div>
+
+        <div class="concern-card">
+          <h3>Brand Transparency</h3>
+          <ul class="concern-details">
+            <li>Business verification</li>
+            <li>Legal compliance check</li>
+            <li>Trust indicators analysis</li>
+            <li>Communication assessment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="user-stories">
+      <div class="section-heading">
+        <h2>Real User Stories</h2>
+        <p>See how our scanner helps users avoid scams and make confident decisions</p>
+      </div>
+
+      <div class="stories-grid">
+        <div class="story-card">
+          <blockquote>&quot;The scanner helped me identify a fraudulent website before making a purchase. Saved me from losing money!&quot;</blockquote>
+          <cite>- Sarah M., Online Shopper</cite>
+        </div>
+
+        <div class="story-card">
+          <blockquote>&quot;Finally, a tool that gives me peace of mind when shopping from new brands online.&quot;</blockquote>
+          <cite>- Michael R., Tech Enthusiast</cite>
+        </div>
+
+        <div class="story-card">
+          <blockquote>&quot;The detailed analysis helped me choose between competing brands. Great for research!&quot;</blockquote>
+          <cite>- Emma T., Smart Consumer</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="section-heading">
+        <h2>Ready to Verify a Brand?</h2>
+        <p>Use our scanner to check brand legitimacy before making your next purchase</p>
+      </div>
+
+      <div class="feature-highlights">
+        <div class="feature-card">
+          <h3>Instant Results</h3>
+          <p>Get comprehensive analysis in minutes</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Data-Driven</h3>
+          <p>Make decisions based on verified data</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Stay Protected</h3>
+          <p>Avoid scams and fraudulent brands</p>
+        </div>
+      </div>
+
+      <a href="https://example.com/scanner" onclick="event.preventDefault(); showPage('generator')" class="cta-button">
+        Try Brand Scanner Now
+      </a>
+    </section>
+  `,
+  features: `
+    <div class="container">
+      <div class="framework-intro">
+        <h1>Brand Legitimacy Analysis Framework</h1>
+        <p class="framework-intro-text">Our comprehensive framework leverages advanced data analytics and multiple verification sources to assess brand legitimacy across key dimensions, providing actionable insights for businesses and consumers.</p>
+        
+        <div class="audience-cards">
+          <div class="audience-card business">
+            <h3>For Brand Owners &amp; Marketers</h3>
+            <ul>
+              <li>Build and demonstrate credibility</li> 
+              <li>Monitor brand reputation</li>
+              <li>Identify trust signals</li>
+              <li>Track improvements over time</li>
+              <li>Generate trust reports</li>
+            </ul>
+          </div>
+          <div class="audience-card consumer">
+            <h3>For Smart Consumers</h3>
+            <ul>
+              <li>Verify brand legitimacy</li>
+              <li>Avoid scams and fraud</li>
+              <li>Make informed decisions</li>
+              <li>Access verification reports</li>
+              <li>Check trust metrics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-deep-dive">
+        <h2>Comprehensive Brand Analysis Framework</h2>
+        <p class="framework-intro">Our detailed 10-point framework evaluates brand legitimacy across multiple critical dimensions.</p>
+
+        <div class="framework-grid">
+          <div class="framework-card">
+            <h3>1. Brand History & Reputation</h3>
+            <ul class="analysis-points">
+              <li><strong>Establishment</strong>: Duration of business operation</li>
+              <li><strong>Reputation</strong>: News coverage, press releases</li> 
+              <li><strong>Industry Presence</strong>: Recognition, partnerships</li>
+              <li><strong>Track Record</strong>: Historical milestones, achievements</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>2. Business Information</h3>
+            <ul class="analysis-points">
+              <li><strong>Registration</strong>: Official business registration</li>
+              <li><strong>Physical Address</strong>: Verified location</li>
+              <li><strong>Contact Details</strong>: Multiple contact methods</li>
+              <li><strong>Documentation</strong>: Legal paperwork verification</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>3. Online Presence</h3>
+            <ul class="analysis-points">
+              <li><strong>Website Quality</strong>: Professional design, functionality</li>
+              <li><strong>Domain Info</strong>: Registration age, ownership</li>
+              <li><strong>Social Media</strong>: Active profiles, engagement</li>
+              <li><strong>Digital Footprint</strong>: Overall online presence</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>4. Customer Reviews</h3>
+            <ul class="analysis-points">
+              <li><strong>Independent Reviews</strong>: Third-party platforms</li>
+              <li><strong>Feedback Analysis</strong>: Pattern recognition</li>
+              <li><strong>Complaint Resolution</strong>: Response handling</li>
+              <li><strong>Customer Satisfaction</strong>: Overall sentiment</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>5. Product Quality</h3>
+            <ul class="analysis-points">
+              <li><strong>Product Details</strong>: Comprehensive information</li>
+              <li><strong>Quality Standards</strong>: Industry benchmarks</li>
+              <li><strong>Pricing Analysis</strong>: Market comparison</li>
+              <li><strong>Service Delivery</strong>: Consistency check</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>6. Legal Compliance</h3>
+            <ul class="analysis-points">
+              <li><strong>Certifications</strong>: Industry licenses</li>
+              <li><strong>Regulations</strong>: Compliance status</li>
+              <li><strong>Terms & Conditions</strong>: Policy review</li>
+              <li><strong>Legal Standing</strong>: Dispute history</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>7. Security & Trust</h3>
+            <ul class="analysis-points">
+              <li><strong>Website Security</strong>: HTTPS, encryption</li>
+              <li><strong>Trust Seals</strong>: Verified badges</li>
+              <li><strong>Data Protection</strong>: Privacy measures</li>
+              <li><strong>Payment Security</strong>: Transaction safety</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>8. Financial Stability</h3>
+            <ul class="analysis-points">
+              <li><strong>Financial Health</strong>: Business stability</li>
+              <li><strong>Investment</strong>: Funding sources</li>
+              <li><strong>Growth Metrics</strong>: Performance trends</li>
+              <li><strong>Market Position</strong>: Industry standing</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>9. Customer Service</h3>
+            <ul class="analysis-points">
+              <li><strong>Response Time</strong>: Support efficiency</li>
+              <li><strong>Support Channels</strong>: Accessibility</li>
+              <li><strong>Issue Resolution</strong>: Problem handling</li>
+              <li><strong>Service Quality</strong>: Support excellence</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h3>10. Transparency</h3>
+            <ul class="analysis-points">
+              <li><strong>Business Practices</strong>: Operational clarity</li>
+              <li><strong>Ethics</strong>: Responsible conduct</li>
+              <li><strong>Accountability</strong>: Response to issues</li>
+              <li><strong>Reporting</strong>: Public disclosure</li>
+            </ul>
+          </div>
+        </div>
+
+        <style>
+          .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+          }
+
+          .framework-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+          }
+
+          .framework-card:hover {
+            transform: translateY(-4px);
+          }
+
+          .framework-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--cloud);
+            padding-bottom: 0.5rem;
+          }
+
+          .analysis-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .analysis-points li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+          }
+
+          .analysis-points li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+          }
+
+          .analysis-points li strong {
+            color: var(--primary);
+            display: inline-block;
+            margin-right: 0.5rem;
+          }
+
+          .framework-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text);
+            margin: 2rem auto;
+            max-width: 800px;
+          }
+        </style>
+      </div>
+    </div>
+  `,
+  report: `
+    <div class="container">
+      <div class="report-header">
+        <h1>Sample Brand Analysis Report</h1>
+        <p class="report-date">Generated on: ${new Date().toLocaleDateString()}</p>
+        <div class="brand-overview">
+          <h2>Demo Brand: TechGear Pro</h2>
+          <div class="brand-quick-stats">
+            <div class="stat">
+              <span class="stat-label">Overall Trust Score</span>
+              <span class="stat-value">8.5/10</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Years in Business</span>
+              <span class="stat-value">8</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Customer Rating</span>
+              <span class="stat-value">4.5/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h3>Brand History and Reputation</h3>
+        <ul>
+          <li>Founded in 2015 by tech industry veterans</li>
+          <li>Featured in TechCrunch, Wired, and Forbes</li>
+          <li>Multiple industry awards for innovation (2018-2023)</li>
+          <li>Consistent market growth with 45% YoY expansion</li>
+        </ul>
+      </div>
+
+      <div class="report-section">
+        <h3>Business Information</h3>
+        <ul>
+          <li>Registered corporation in Delaware (Reg #12345)</li>
+          <li>Headquarters in Silicon Valley with global offices</li>
+          <li>500+ employees across 3 continents</li>
+          <li>Clear organizational structure with verified leadership</li>
+        </ul>
+      </div>
+
+      <div class="report-section">
+        <h3>Online Presence</h3>
+        <ul>
+          <li>Professional website with SSL security</li>
+          <li>Active social media presence (1M+ followers)</li>
+          <li>Strong domain authority (DA: 65)</li>
+          <li>Consistent brand messaging across platforms</li>
+        </ul>
+      </div>
+
+      <div class="report-section">
+        <h3>Customer Reviews</h3>
+        <ul>
+          <li>4.5/5 average rating across platforms</li>
+          <li>90% positive sentiment in social mentions</li>
+          <li>Responsive to customer feedback</li>
+          <li>Transparent review policy</li>
+        </ul>
+      </div>
+
+      <div class="report-section">
+        <h3>Security Measures</h3>
+        <ul>
+          <li>PCI DSS compliant payment processing</li>
+          <li>Regular security audits and penetration testing</li>
+          <li>GDPR and CCPA compliant data handling</li>
+          <li>Multi-factor authentication implemented</li>
+        </ul>
+      </div>
+
+      <div class="report-summary">
+        <h2>Executive Summary</h2>
+        <div class="summary-grid">
+          <div class="summary-card strength">
+            <h3>Key Strengths</h3>
+            <ul>
+              <li>Strong financial backing</li>
+              <li>Excellent security measures</li>
+              <li>Positive customer feedback</li>
+            </ul>
+          </div>
+          <div class="summary-card warning">
+            <h3>Areas to Watch</h3>
+            <ul>
+              <li>Recent management changes</li>
+              <li>Expanding too quickly</li>
+              <li>Customer service response times</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://example.com/generator" onclick="event.preventDefault(); showPage('generator')" class="cta-button">Generate Your Own Report</a>
+    </div>
+  `,
+  glossary: `
+    <div class="glossary-content">
+      <div class="framework-description">
+        <h1>The Trustworthiness Blueprint</h1>
+        <p class="framework-intro">The Trustworthiness Blueprint represents the culmination of extensive research and practical experience in brand legitimacy assessment. Our framework goes beyond surface-level checks to provide a comprehensive evaluation system that considers both traditional and modern indicators of brand trustworthiness.</p>
+      </div>
+
+      <div class="glossary-section framework-comparison">
+        <h2>Framework Comparison</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Framework</th>
+              <th>Pros</th>
+              <th>Cons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Trustworthiness Blueprint</td>
+              <td>
+                <ul>
+                  <li>Comprehensive coverage of brand aspects</li>
+                  <li>Structured evaluation approach</li>
+                  <li>Customizable for various brands</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Resource-intensive</li>
+                  <li>Some subjective elements in evaluation</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Better Business Bureau (BBB) Accreditation</td>
+              <td>
+                <ul>
+                  <li>Established credibility</li>
+                  <li>Clear standards for accreditation and ratings</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Primarily focused on North America</li>
+                  <li>Limited scope</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Trustpilot</td>
+              <td>
+                <ul>
+                  <li>Customer-centric</li>
+                  <li>Easy access to feedback and ratings</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Review bias and manipulation possible</li>
+                  <li>Limited depth</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="glossary-section">
+        <h2>Key Components</h2>
+        
+        <h3>1. Brand History and Reputation</h3>
+        <p>Examines the founder's story and brand timeline, assessing credibility and growth through:</p>
+        <ul>
+          <li>Founder's background verification</li>
+          <li>Timeline analysis</li>
+          <li>Growth milestones</li>
+        </ul>
+
+        <h3>2. Business Information</h3>
+        <p>Verifies official registration and contact details through:</p>
+        <ul>
+          <li>Company registration records</li>
+          <li>Physical address verification</li>
+          <li>Contact information validation</li>
+        </ul>
+
+        <h3>3. Online Presence</h3>
+        <p>Evaluates digital footprint quality through:</p>
+        <ul>
+          <li>Website analysis</li>
+          <li>Domain verification</li>
+          <li>Social media presence</li>
+        </ul>
+
+        <h3>4. Customer Reviews</h3>
+        <p>Aggregates and analyzes customer feedback from:</p>
+        <ul>
+          <li>Independent review platforms</li>
+          <li>Social media mentions</li>
+          <li>Customer testimonials</li>
+        </ul>
+
+        <h3>5. Product and Service Quality</h3>
+        <p>Assesses product/service quality through:</p>
+        <ul>
+          <li>Product testing results</li>
+          <li>Quality certifications</li>
+          <li>Return policy analysis</li>
+          <li>Warranty verification</li>
+        </ul>
+      </div>
+
+      <div class="glossary-section">
+        <h2>Using the Framework</h2>
+        <p>To effectively use the Trustworthiness Blueprint:</p>
+        <ol>
+          <li>Gather information about the brand across all framework components</li>
+          <li>Evaluate each component using provided criteria</li>
+          <li>Consider context and industry standards</li>
+          <li>Make an informed decision based on comprehensive analysis</li>
+        </ol>
+      </div>
+
+      <div class="glossary-section">
+        <h2>Framework Implementation Guide</h2>
+        <div class="implementation-steps">
+          <div class="step">
+            <h3>1. Initial Assessment</h3>
+            <p>Begin with basic brand information gathering and preliminary checks</p>
+            <ul class="step-details">
+              <li>Gather brand documentation</li>
+              <li>Perform initial online research</li>
+              <li>Check basic registration details</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h3>2. In-Depth Analysis</h3>
+            <p>Conduct thorough analysis of each framework component</p>
+            <ul class="step-details">
+              <li>Analyze brand history and reputation</li>
+              <li>Verify business information</li>
+              <li>Evaluate online presence</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h3>3. Risk Assessment</h3>
+            <p>Identify potential risks and areas for improvement</p>
+            <ul class="step-details">
+              <li>Assess financial stability</li>
+              <li>Evaluate security measures</li>
+              <li>Review customer service quality</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h3>4. Decision Making</h3>
+            <p>Make an informed decision based on the comprehensive analysis</p>
+            <ul class="step-details">
+              <li>Consider all framework components</li>
+              <li>Weight the importance of each component</li>
+              <li>Make a decision based on the overall assessment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  pricing: `
+    <div class="container">
+      <div class="framework-description">
+        <h1>Brand Trust Certification Plans</h1>
+        <p class="framework-intro-text">Build lasting trust with customers through our comprehensive brand certification program</p>
+      </div>
+
+      <section class="pricing-tiers">
+        <div class="section-heading">
+          <h2>Choose Your Trust Building Plan</h2>
+          <p>Select the perfect plan to showcase your brand's commitment to transparency and trust</p>
+        </div>
+        
+        <div class="tier-grid">
+          <div class="pricing-tier">
+            <span class="tier-label">For Consumers</span>
+            <h3>Free</h3>
+            <div class="tier-price">$0</div>
+            <ul>
+              <li>Basic brand legitimacy scan</li>
+              <li>High-level trust metrics</li>
+              <li>3 scans per month</li>
+              <li>Basic report access</li>
+            </ul>
+            <a href="https://example.com/signup" class="cta-button">Get Started Free</a>
+          </div>
+          
+          <div class="pricing-tier">
+            <span class="tier-label">Most Popular</span>
+            <h3>Basic</h3>
+            <div class="tier-price">$499<small>/year</small></div>
+            <ul>
+              <li>Brand Trust Badge</li>
+              <li>Monthly Trust Reports</li>
+              <li>Basic Website Integration</li>
+              <li>Email Support</li>
+              <li>10 verification scans/month</li>
+              <li>Basic real-time monitoring</li>
+            </ul>
+            <a href="https://example.com/signup" class="cta-button">Get Started</a>
+          </div>
+          
+          <div class="pricing-tier featured">
+            <span class="tier-label">Best Value</span>
+            <h3>Professional</h3>
+            <div class="tier-price">$999<small>/year</small></div>
+            <ul>
+              <li>All Trust Badges</li>
+              <li>Weekly Trust Reports</li>
+              <li>Advanced Website Integration</li>
+              <li>Priority Support</li>
+              <li>Brand Monitoring</li>
+              <li>Unlimited verification scans</li>
+              <li>Real-time alerts</li>
+              <li>Advanced analytics</li>
+            </ul>
+            <a href="https://example.com/signup" class="cta-button">Get Started</a>
+          </div>
+          
+          <div class="pricing-tier">
+            <span class="tier-label">For Large Brands</span>
+            <h3>Enterprise</h3>
+            <div class="tier-price">Custom</div>
+            <ul>
+              <li>Custom Badge Design</li>
+              <li>Real-time Trust Reports</li>
+              <li>Full API Access</li>
+              <li>Dedicated Support</li>
+              <li>White Label Option</li>
+              <li>Custom integrations</li>
+              <li>Priority features</li>
+              <li>Volume pricing</li>
+            </ul>
+            <a href="https://example.com/contact" class="cta-button">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="certification-badges">
+        <div class="section-heading">
+          <h2>Trust Badge Benefits</h2>
+          <p>Show customers they can trust your brand with our certification badges</p>
+        </div>
+        
+        <div class="badge-grid">
+          <div class="badge-card">
+            <div class="badge-preview">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v6l-8 4-8-4V9l8-4.3z"/>
+              </svg>
+            </div>
+            <h3>Verified Trust Badge</h3>
+            <p>Our flagship badge showcasing your brand's verified status and trust score</p>
+            <ul>
+              <li>Third-party verification</li>
+              <li>Trust score display</li>
+              <li>Click to verify functionality</li>
+            </ul>
+          </div>
+
+          <div class="badge-card">
+            <div class="badge-preview">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Security Badge</h3>
+            <p>Demonstrate your commitment to customer data protection and security</p>
+            <ul>
+              <li>Security verification</li>
+              <li>SSL certification</li>
+              <li>Data protection compliance</li>
+            </ul>
+          </div>
+
+          <div class="badge-card">
+            <div class="badge-preview">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+            </div>
+            <h3>Customer Satisfaction Badge</h3>
+            <p>Highlight your excellent customer service and satisfaction ratings</p>
+            <ul>
+              <li>Customer ratings</li>
+              <li>Service quality metrics</li>
+              <li>Response time tracking</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="website-integration">
+        <div class="section-heading">
+          <h2>Easy Implementation</h2>
+          <p>Add your trust badge to your website with a simple code snippet</p>
+        </div>
+        
+        <div class="integration-code">
+          <code>&lt;script src="https://trust-badge.example.com/v1/badge.js"&gt;&lt;/script&gt;</code>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Real-time Updates</h3>
+            <p>Badge automatically updates with your latest trust score</p>
+          </div>
+          <div class="feature-card">
+            <h3>Customizable Design</h3>
+            <p>Match the badge style to your website</p>
+          </div>
+          <div class="feature-card">
+            <h3>Mobile Responsive</h3>
+            <p>Looks great on all devices</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="section-heading">
+          <h2>Ready to Build Trust?</h2>
+          <p>Join thousands of brands building customer confidence with our certification badges</p>
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="https://example.com/signup" class="cta-button">Get Started</a>
+          <a href="https://example.com/demo" class="cta-button">Request Demo</a>
+        </div>
+      </section>
+    </div>
+  `,
+  generator: `
+    <div class="container">
+      <div class="scanner-header">
+        <h1>Brand Trust Scanner</h1>
+        <p class="scanner-subtitle">Enter a brand name to get a comprehensive trust analysis based on our 10-dimension framework</p>
+      </div>
+      
+      <div class="scanner-form">
+        <div class="input-group">
+          <input type="text" id="brandName" placeholder="Enter brand name..." class="scanner-input" />
+          <input type="url" id="brandWebsite" placeholder="Brand website (optional)" class="scanner-input" />
+          <select id="industryType" class="scanner-input">
+            <option value="">Select Industry Type</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="tech">Technology</option>
+            <option value="retail">Retail</option>
+            <option value="finance">Finance</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button onclick="startScan()" class="cta-button scan-button">
+          <svg class="scan-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9.5 3.25a6.25 6.25 0 100 12.5 6.25 6.25 0 000-12.5zM2 9.5a7.5 7.5 0 1113.3 4.72l6.2 6.21a.75.75 0 11-1.06 1.06l-6.2-6.2A7.5 7.5 0 012 9.5z"/>
+          </svg>
+          Start Brand Scan
+        </button>
+      </div>
+
+      <div class="scan-progress" style="display: none;">
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="scan-status">Initializing scan...</div>
+      </div>
+
+      <div class="scan-results" style="display: none;">
+        <div class="results-header">
+          <h2>Brand Trust Analysis Report</h2>
+          <div class="scan-meta">
+            <span class="scan-date"></span>
+            <span class="scan-id"></span>
+          </div>
+        </div>
+        <div class="trust-score-summary">
+          <div class="score-circle">
+            <svg viewBox="0 0 36 36" class="score-chart">
+              <path class="score-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="score-circle-fill" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <div class="score-number"></div>
+          </div>
+          <div class="score-label">Overall Trust Score</div>
+        </div>
+        <div class="dimension-scores"></div>
+        <div class="detailed-analysis"></div>
+        <div class="action-buttons">
+          <button class="cta-button download-report">Download Full Report</button>
+          <button class="cta-button share-report">Share Report</button>
+        </div>
+      </div>
+    </div>
+  `
+};
+function toggleQuickNav() {
+  const quickNav = document.querySelector('.quick-nav');
+  quickNav.classList.toggle('collapsed');
+}
+function toggleMenu() {
+  const nav = document.querySelector('.side-nav');
+  const overlay = document.querySelector('.side-nav-overlay');
+  nav.classList.toggle('open');
+  overlay.classList.toggle('active');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+function showPage(pageName) {
+  if (pageName.startsWith('/')) {
+    pageName = pageName.substring(1);
+  }
+  if (!pageName || pageName === '') {
+    pageName = 'home';
+  }
+  pageName = pageName.replace('.html', '');
+  const content = document.getElementById('page-content');
+  if (!content) {
+    console.error('Page content element not found');
+    return;
+  }
+  const urlPath = window.location.pathname.substring(1);
+  if (urlPath !== pageName) {
+    const newUrl = `${window.location.origin}/${pageName}`;
+    window.history.pushState({
+      page: pageName
+    }, '', newUrl);
+  }
+  content.innerHTML = pages[pageName] || pages['home'];
+  const headings = content.querySelectorAll('h2, h3');
+  if (headings.length > 0) {
+    const quickNav = document.createElement('div');
+    quickNav.className = 'quick-nav';
+    const quickNavHtml = `
+      <button class="quick-nav-toggle" onclick="toggleQuickNav()">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+      <h3>Quick Navigation</h3>
+      <ul>
+        ${Array.from(headings).map(heading => {
+      const id = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      heading.id = id;
+      return `<li><a href="#${id}" class="quick-nav-link">${heading.textContent}</a></li>`;
+    }).join('')}
+      </ul>
+    `;
+    quickNav.innerHTML = quickNavHtml;
+    content.insertBefore(quickNav, content.firstChild);
+  }
+  const sideNav = document.querySelector('.side-nav');
+  if (sideNav) {
+    sideNav.classList.remove('open');
+  }
+  window.scrollTo(0, 0);
+  document.querySelectorAll('.quick-nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = e.target.getAttribute('href').slice(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  const quickNav = document.querySelector('.quick-nav');
+  if (quickNav) {
+    quickNav.classList.remove('collapsed');
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname.substring(1);
+  showPage(path);
+});
+window.addEventListener('popstate', event => {
+  if (event.state && event.state.page) {
+    showPage(event.state.page);
+  } else {
+    const path = window.location.pathname.substring(1);
+    showPage(path);
+  }
+});
+document.addEventListener('scroll', () => {
+  const stats = document.querySelectorAll('.stat-value');
+  stats.forEach(stat => {
+    if (isElementInViewport(stat) && !stat.classList.contains('animated')) {
+      animateValue(stat, 0, parseInt(stat.textContent), 2000);
+      stat.classList.add('animated');
+    }
+  });
+});
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start) + (obj.dataset.suffix || '');
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function startScan() {
+  const brandName = document.getElementById('brandName').value;
+  const brandWebsite = document.getElementById('brandWebsite').value;
+  const industryType = document.getElementById('industryType').value;
+  if (!brandName) {
+    alert('Please enter a brand name');
+    return;
+  }
+  const progress = document.querySelector('.scan-progress');
+  const results = document.querySelector('.scan-results');
+  progress.style.display = 'block';
+  results.style.display = 'none';
+  let progressValue = 0;
+  const progressBar = document.querySelector('.progress-bar');
+  const statusText = document.querySelector('.scan-status');
+  const steps = ['Initializing scan...', 'Checking brand history...', 'Analyzing online presence...', 'Verifying business information...', 'Aggregating customer reviews...', 'Evaluating security measures...', 'Assessing compliance status...', 'Analyzing financial stability...', 'Checking customer service quality...', 'Evaluating transparency metrics...', 'Generating final report...'];
+  let currentStep = 0;
+  const interval = setInterval(() => {
+    progressValue += 10;
+    progressBar.style.width = `${progressValue}%`;
+    statusText.textContent = steps[currentStep];
+    currentStep++;
+    if (progressValue >= 100) {
+      clearInterval(interval);
+      setTimeout(showResults, 500, brandName);
+    }
+  }, 800);
+}
+
+function showResults(brandName) {
+  const progress = document.querySelector('.scan-progress');
+  const results = document.querySelector('.scan-results');
+  progress.style.display = 'none';
+  results.style.display = 'block';
+  const scanDate = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const scanId = 'SCN' + Math.random().toString(36).substr(2, 9).toUpperCase();
+  document.querySelector('.scan-date').textContent = `Scan Date: ${scanDate}`;
+  document.querySelector('.scan-id').textContent = `Scan ID: ${scanId}`;
+  const score = Math.floor(Math.random() * 30) + 70;
+  document.querySelector('.score-number').textContent = score;
+  const circumference = 2 * Math.PI * 15.9155;
+  const offset = circumference - score / 100 * circumference;
+  document.querySelector('.score-circle-fill').style.strokeDasharray = `${circumference} ${circumference}`;
+  document.querySelector('.score-circle-fill').style.strokeDashoffset = offset;
+  const dimensions = ['Brand History', 'Online Presence', 'Customer Reviews', 'Security Measures', 'Business Verification', 'Financial Stability', 'Customer Service', 'Compliance', 'Product Quality', 'Transparency'];
+  const dimensionScores = dimensions.map(dim => ({
+    name: dim,
+    score: Math.floor(Math.random() * 30) + 70
+  }));
+  const dimensionHtml = dimensionScores.map(dim => `
+    <div class="dimension-card">
+      <h3>${dim.name}</h3>
+      <div class="dimension-score">${dim.score}/100</div>
+      <div class="dimension-bar">
+        <div class="bar-fill" style="width: ${dim.score}%"></div>
+      </div>
+    </div>
+  `).join('');
+  document.querySelector('.dimension-scores').innerHTML = dimensionHtml;
+  const style = document.createElement('style');
+  style.textContent = `
+    .dimension-card {
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    
+    .dimension-score {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0.5rem 0;
+    }
+    
+    .dimension-bar {
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .bar-fill {
+      height: 100%;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+  `;
+  document.head.appendChild(style);
+}
+</script>
+</body></html>
