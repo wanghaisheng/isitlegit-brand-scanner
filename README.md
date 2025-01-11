@@ -11,6 +11,10 @@ https://storm.genie.stanford.edu/
 测试能否生成报告
 
 
+输入为从谷歌趋势提取的词，问gpt，筛选出品牌词，让aistudio和https://mplx.run/ 准备材料，分别是社媒和搜索方面，storm生成概要，输出为报告形式
+
+
+
 是不是钓鱼网站
 
 https://github.com/0xDanielLopez/TweetFeed
