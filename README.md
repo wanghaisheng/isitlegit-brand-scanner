@@ -1,5 +1,8 @@
 # brand-trust-certification
 
+is chinese factory legit？
+
+
 score any brand or website to tell whether it is legit
 
 
